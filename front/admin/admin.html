@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./static/admin/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Библиотека++</h1>
+        <a href="http://localhost:3000/admin/logout" id="exit">Выход</a>
+    </div>
+    <div id="content">
+        <script id="delete-pattern" type="text/template">
+            <a id="delete{id}" onclick="deleteBook({id})">{bookStatus}</a>
+        </script>
+        <script id="pattern" type="text/template">
+            <tr>
+                <td>{title}</td>
+                <td>{author}</td>
+                <td>{visits}</td>
+                <td>{purchases}</td>
+                <td>{action}</td>
+            </tr>
+        </script>
+        <script type="text/template" id="pagination-pattern">
+            <button id="button{page}" class="{state}" onclick="goToPage({page})"> 
+                {page}
+            </button>
+            </script>
+        <script type="text/template" id="pagination-previous">
+            <button id="previous" onclick="goToPreviousPages()">
+                &laquo;
+            </button>
+            </script>
+        <script type="text/template" id="pagination-next">
+            <button id="next" onclick="goToNextPages()">
+                &raquo;
+            </button>
+        </script>
+        <script type="text/template" id="table-head">
+            <tr>
+                <th id="title">Название книги</th>
+                <th id="author">Авторы</th>
+                <th id="visits">Посещений</th>
+                <th id="purchases">Покупок</th>
+                <th id="action">Действие</th>
+            </tr>
+            </script>
+        <div id="table_data_base">
+            <table class="table table-striped" id="table">
+            </table>
+            <nav id="pagination">
+            </nav>
+        </div>
+        <form id="form_for_adding_book" enctype="multipart/form-data">
+            <div class="first-colomn">
+                <input type="text" id="titleInput" placeholder="Название книги" name="title">
+                <input type="file" id="fileInput" onchange="previewImage()" name="image">
+                <img id="image-preview">
+                <button type="button" class="btn btn-secondary" onclick="submitForm()">Добавить</button>
+            </div>
+            <div class="second-colomn">
+                <input type="text" id="author1" placeholder="Автор 1" name="author1">
+                <input type="text" id="author2" placeholder="Автор 2" name="author2">
+                <input type="text" id="author3" placeholder="Автор 3" name="author3">
+            </div>
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <script src="./static/admin/common.js"></script>
+    <script src="./static/admin/admin.js"></script>
+    <script src="./static/books/books-page/books-page_files/jquery.matchHeight-min.js"></script>
+    <script src="./static/books/books-page/books-page_files/libs.min.js"></script>
+</body>
+
+</html>

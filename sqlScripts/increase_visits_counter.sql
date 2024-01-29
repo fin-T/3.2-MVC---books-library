@@ -1,0 +1,1 @@
+UPDATE books SET visits = visits + 1 WHERE bookIDs = (?);

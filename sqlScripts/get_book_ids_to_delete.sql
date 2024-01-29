@@ -1,0 +1,1 @@
+SELECT bookIDs FROM books WHERE action = (?);

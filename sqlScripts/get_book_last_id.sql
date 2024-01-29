@@ -1,0 +1,1 @@
+SELECT bookIDs FROM books ORDER BY bookIDs DESC LIMIT 1;

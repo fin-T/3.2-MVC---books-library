@@ -1,0 +1,1 @@
+ALTER TABLE authors AUTO_INCREMENT = 1;

@@ -1,0 +1,139 @@
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 40%;
+}
+
+td,
+th {
+    border: 1px solid #000000;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+#table_data_base {
+    width: 50%;
+}
+
+#content {
+    display: flex;
+    flex-direction: row;
+}
+
+#table_data_base {
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+    margin-right: 2%;
+}
+
+nav[id="pagination"] {
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+#exit {
+    margin-left: auto;
+    margin-right: 3%;
+}
+
+#form_for_adding_book {
+    display: flex;
+    flex-direction: row;
+    width: 40%;
+    height: auto;
+    border: 1px solid black;
+}
+
+.first-colomn {
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+    margin-left: 1%;
+    margin-top: 1%;
+}
+
+#titleInput {
+    margin-bottom: 1%;
+}
+
+#fileInput {
+    margin-bottom: 1%;
+}
+
+#imagePreview {
+    width: 30%;
+    margin-bottom: 1%;
+}
+
+.btn {
+    margin-top: auto;
+    margin-bottom: 1%;
+}
+
+.active-button {
+    background-color: grey;
+}
+
+#imagePreview img {
+    max-width: 200%;
+    height: auto;   
+}
+
+#imagePreview {
+    width: 48%;
+}
+
+.second-colomn {
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+    margin-top: 1%;
+    margin-left: 2%;
+}
+
+#author1 {
+    margin-bottom: 1%;
+}
+
+#author2 {
+    margin-bottom: 1%;
+}
+
+#author3 {
+    margin-bottom: 1%;
+}
+
+.clicked {
+    background-color: #7a7a7a;
+    border-width: 1px;
+}
+
+a[id^="delete"] {
+    color: blue !important;
+    text-decoration: underline !important;
+    background-color: rgba(255, 255, 255, 0) !important;
+}
+
+a[id^="delete"]:hover {
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    #content {
+        flex-direction: column;
+    }
+}
