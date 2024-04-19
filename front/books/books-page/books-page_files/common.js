@@ -199,7 +199,6 @@ var view = {
         content.html(contentHTML);
         content.show('fast');
     }
-
 };
 /* ------------------------------- end view ----------------------------------*/
 

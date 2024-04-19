@@ -1,0 +1,1 @@
+MYSQLDUP -u? -p? --DATABASES ? > ?;
